@@ -24,6 +24,8 @@ app.use(bodyParser.text({ type: 'text/html'}))
 require("./app/routing/htmlRoutes.js")(app);
 require("./app/routing/apiRoutes.js")(app);
 
+app.use(express.static(path.join(__dirname, ‘./app/public’)));
+
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
