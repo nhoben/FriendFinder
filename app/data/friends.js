@@ -176,4 +176,4 @@ var friends = [{
 
 
 ]
-module.exports = friends;s
+module.exports = friends;
