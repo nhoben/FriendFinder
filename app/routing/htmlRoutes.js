@@ -21,19 +21,24 @@ app.use(bodyParser.json());
 
 module.exports = function (app){
 
+
+
   app.get('/survey', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/survey.html'));
+    // res.sendFile(path.join(__dirname, '../public/survey.html'));
+    res.sendFile('/public/survey.html', { root: 'app' });
+
+  });
+
+
+
+  // Home page route
+  app.use('/',function (req, res) {
+    res.sendFile('/public/home.html', { root: 'app' });
+   // res.sendFile(path.join(__dirname, '../public/home.html'));
+
   });
 
 }
-  // Home page route
-  app.use('/',function (req, res) {
-   // res.sendFile(path.join(__dirname, '/../public/home.html'));
-
-    res.sendFile('/../public/home.html' , {root: __dirname});
-   
-  });
-
 
 
 
