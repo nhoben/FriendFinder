@@ -6,7 +6,8 @@ var userScores;
 var friends = require("../data/friends.js");
 module.exports = function(app){
   app.get("/api/friends", function(req,res){
-    userData = req.body;
+    //userData = req.body;
+    userData = res.body;
 userScores = userData.scores;
 
 
